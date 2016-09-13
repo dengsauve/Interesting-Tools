@@ -91,3 +91,10 @@ def get_points(hand):
         else:
             total += int(hand[i][1])
     return total
+
+
+def print_options():
+    print("""Options:
+    1. Hit - Take another card.
+    2. Stand - You're good.
+    3. Fold - Too rich for my blood.""")
