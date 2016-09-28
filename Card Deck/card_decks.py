@@ -1,16 +1,39 @@
 from random import shuffle
 
+class Card(object):
+
+    card_values = {
+        'Ace': 11,  # value of the ace is high until it needs to be low
+        '2': 2,
+        '3': 3,
+        '4': 4,
+        '5': 5,
+        '6': 6,
+        '7': 7,
+        '8': 8,
+        '9': 9,
+        '10': 10,
+        'Jack': 10,
+        'Queen': 10,
+        'King': 10
+    }
+
+    def __init__(self, suit, rank):
+        self.suit = suit.capitalize()
+        self.rank = rank
+        self.points = self.card_values[rank]
+
+
 class standard(object):
     def __init__(self):
         description = "Regular 52 Cards"
         suits = "hearts", "spades", "diamonds", "clubs"
-        faces = tuple(range(1,13))
+        faces = ('Ace','2','3','4','5','6','7','8','9','10','Jack','Queen','King')
         deck = []
 
         for suit in suits:
             for face in faces:
-                deck.append([suit, face])
-
+                deck.append(Card(suit, face))
         self.description = description
         self.suits = suits
         self.faces = faces
@@ -77,19 +100,22 @@ class pinochle(standard):
 
 
 def show_poker_hands(dealers_hand, players_hand):
-    print("Dealer Shows:", str(dealers_hand[0][1]), "of", str(dealers_hand[0][0]), "\n")
+    print("\n\n##############################")
+    print("# Dealer Shows:", str(dealers_hand[0].rank), "of", str(dealers_hand[0].suit), "\n#")
     for i in range(len(players_hand)):
-        print("You Show:", str(players_hand[i][1]), "of", str(players_hand[i][0]))
+        print("# You Show:", str(players_hand[i].rank), "of", str(players_hand[i].suit))
+    print("##############################")
     print("\n")
 
 
 def get_points(hand):
     total = 0
     for i in range(len(hand)):
-        if hand[i][1] == "11" or hand[i][1] == "12" or hand[i][1] == "13":
-            total += 10
-        else:
-            total += int(hand[i][1])
+        total += hand[i].points
+    if total > 21:
+        for i in range(len(hand)):
+            if hand[i].rank == "Ace" and total > 21:
+                total -= 10
     return total
 
 
