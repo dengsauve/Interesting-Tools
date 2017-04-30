@@ -1,5 +1,19 @@
+############################################################
+#
+#  Name:         Dennis Sauve
+#  Date:         04/30/2017
+#  Objective:    Controlling car_reader.rb
+#  File:         main.rb
+#  Description:  This is a control for car_reader.rb
+#                development is still underway.
+#
+############################################################
 require_relative('car_readers')
 
+
+def grand_list
+  union_gospel + jennifer_auto + auto_credit_sales + tk_auto + independent + fresh_start + labrosse
+end
 
 def union_gospel
   ugm = UGMmotors.new('http://www.ugmmotors.org/inventory')
@@ -35,11 +49,17 @@ def independent
   ias.car_list
 end
 
+def fresh_start
+  fsas = IndependentAuto.new('http://www.freshstartas.com/inventory.aspx?cursort=asc&pagesize=500&ordby=price')
+  fsas.car_list
+end
 
+def labrosse
+  las = TkAutoSales.new('http://www.labrosseautosales.com/used-cars-for-sale-spokane-wa')
+  las.car_list
+end
 
-
-
-
+puts grand_list
 
 
 # end of main

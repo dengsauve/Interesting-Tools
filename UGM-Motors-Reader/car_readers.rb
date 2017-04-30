@@ -1,4 +1,19 @@
+############################################################
+#
+#  Name:         Dennis Sauve
+#  Date:         04/30/2017
+#  Objective:    Spokane Car Lot Compiler
+#  File:         car_readers.rb
+#  Description:  This project is aimed at being able to
+#                compile a central list of all cars
+#                available in the Greater Spokane Area.
+#                The focus ofclass is collecting the data.
+#                Formatting and sorting will be handled by
+#                another class.
+#
+############################################################
 require 'open-uri'
+
 
 class Carlot
 
