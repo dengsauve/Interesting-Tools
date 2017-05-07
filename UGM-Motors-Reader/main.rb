@@ -8,7 +8,7 @@
 #                development is still underway.
 #
 ############################################################
-require_relative('car_readers')
+require_relative('lib/car_readers')
 require 'ruby-progressbar'
 
 def grand_list

@@ -19,6 +19,7 @@ class Carlot
 
   def initialize(website)
     @contents = open(website).read.split("\n")
+    @car_list = []
   end
 
 end
@@ -28,7 +29,7 @@ class Jennifers < Carlot
 
 
   def retrieve_cars
-    cars, make_model, price, details = [], '', '', ''
+    make_model, price, details = '', '', ''
     @contents.each do |line|
       if line =~ /<span\sstyle="font-size:131%;\sfont-weight:bold;">(.+)<\/span>/
         make_model = $1
@@ -41,16 +42,16 @@ class Jennifers < Carlot
       end
       if line =~ /Year:<\/span>\s?(\d{4})/
         year = $1
-        cars << [year, make_model, price, details]
+        car_list << Car.new(year + make_model, price, details)
       end
     end
-    cars
+    car_list
   end
 
-  def car_list
+  def to_s
     ret_str = ''
     retrieve_cars.each do |car|
-      ret_str += car[0].ljust(5) + car[1].ljust(40, '.') + car[2].rjust(11, '.') + " > " + car[3] + "\n"
+      ret_str += car.to_s
     end
     ret_str
   end
@@ -61,7 +62,6 @@ end
 class UGMmotors < Carlot
 
   def retrieve_cars
-    cars = []
     @contents.each do |line|
       if line =~ /title="Link To (\d{4}\s\w+\s\w+)\s&#8212;\s(\S+)\s/ and !line.include?('MECHANIC')
         make_model = $1
@@ -71,16 +71,15 @@ class UGMmotors < Carlot
         else
           details = ''
         end
-        cars << [make_model, price, details]
+        car_list << Car.new(make_model, price, details)
       end
     end
-    cars
   end
 
   def car_list
     ret_str=''
-    retrieve_cars.each do |car|
-      ret_str += car[0].ljust(30, '.') + car[1].rjust(11, '.') + " > " + car[2] + "\n"
+    car_list.each do |car|
+      car.to_s
     end
     ret_str
   end
