@@ -9,22 +9,32 @@
 #
 ############################################################
 require_relative('lib/car_readers')
+require_relative('lib/cars')
 require 'ruby-progressbar'
 
+
 def grand_list
-  union_gospel + jennifer_auto + auto_credit_sales + tk_auto + independent + fresh_start + labrosse
+  union_gospel.to_s +
+      jennifer_auto +
+      auto_credit_sales +
+      tk_auto +
+      independent +
+      fresh_start +
+      labrosse
 end
 
 def union_gospel
   puts 'Retrieving UGM Motors Data'
   ugm = UGMmotors.new('http://www.ugmmotors.org/inventory')
-  ugm.car_list
+  ugm.retrieve_cars
+  ugm.to_s
 end
 
 def jennifer_auto
   puts 'Retrieving Jennifers Used Cars Data'
   jazz = Jennifers.new('http://www.jennifersautosales.com/content/inventory.php')
-  jazz.car_list
+  jazz.retrieve_cars
+  jazz.to_s
 end
 # Auto Credit Sales  http://www.autocreditsales.com/used-cars-spokane-valley-wa?
 
@@ -35,7 +45,8 @@ def auto_credit_sales
   (1..30).to_a.each do |page|
     3.times {progressbar.increment}
     acl = AutoCredit.new("http://www.autocreditsales.com/used-cars-spokane-valley-wa?page=#{page}")
-    ret_str += acl.car_list
+    acl.retrieve_cars
+    ret_str += acl.to_s
   end
   puts
   ret_str
@@ -48,7 +59,8 @@ def tk_auto
   (1..15).to_a.each do |page|
     6.times{progressbar.increment}
     tka = TkAutoSales.new("http://www.tkautosalesspokane.com/used-cars-for-sale-spokane?page=#{page}")
-    ret_str += tka.car_list
+    tka.retrieve_cars
+    ret_str += tka.to_s
   end
   puts
   ret_str
@@ -57,19 +69,22 @@ end
 def independent
   puts 'Retrieving Independent Auto Sales Data'
   ias = IndependentAuto.new('http://www.independentautowa.com/inventory.aspx?cursort=asc&pagesize=500&ordby=price')
-  ias.car_list
+  ias.retrieve_cars
+  ias.to_s
 end
 
 def fresh_start
   puts 'Retrieving Fresh Start Auto Sales Data'
   fsas = IndependentAuto.new('http://www.freshstartas.com/inventory.aspx?cursort=asc&pagesize=500&ordby=price')
-  fsas.car_list
+  fsas.retrieve_cars
+  fsas.to_s
 end
 
 def labrosse
   puts 'Retrieving Labrosse Auto Sales Data'
   las = TkAutoSales.new('http://www.labrosseautosales.com/used-cars-for-sale-spokane-wa')
-  las.car_list
+  las.retrieve_cars
+  las.to_s
 end
 
 puts grand_list

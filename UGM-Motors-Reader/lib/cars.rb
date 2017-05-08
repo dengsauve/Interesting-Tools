@@ -22,6 +22,6 @@ class Car
   end
 
   def to_s
-    @make_model.ljust(30, '.') + '$' + @price.rjust(11, '.') + ' > ' + @url + "\n"
+    @make_model.ljust(45, '.') + ('$' + @price).rjust(11, '.') + ' > ' + @url + "\n"
   end
 end
