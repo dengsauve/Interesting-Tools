@@ -37,28 +37,36 @@
             this.lblMinInterval = new System.Windows.Forms.Label();
             this.lblMaxInterval = new System.Windows.Forms.Label();
             this.btnQuit = new System.Windows.Forms.Button();
+            this.btnUsage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericMinInterval)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericMaxInterval)).BeginInit();
             this.SuspendLayout();
             // 
             // btnStart
             // 
+            this.btnStart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnStart.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnStart.Location = new System.Drawing.Point(12, 139);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(100, 23);
+            this.btnStart.Size = new System.Drawing.Size(45, 23);
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.UseVisualStyleBackColor = false;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(12, 168);
+            this.btnStop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnStop.ForeColor = System.Drawing.Color.White;
+            this.btnStop.Location = new System.Drawing.Point(63, 139);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(100, 23);
+            this.btnStop.Size = new System.Drawing.Size(49, 23);
             this.btnStop.TabIndex = 1;
             this.btnStop.Text = "Stop";
-            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.UseVisualStyleBackColor = false;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // txtName
@@ -172,12 +180,26 @@
             this.btnQuit.UseVisualStyleBackColor = true;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
+            // btnUsage
+            // 
+            this.btnUsage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnUsage.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUsage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnUsage.Location = new System.Drawing.Point(12, 168);
+            this.btnUsage.Name = "btnUsage";
+            this.btnUsage.Size = new System.Drawing.Size(100, 23);
+            this.btnUsage.TabIndex = 9;
+            this.btnUsage.Text = "Usage";
+            this.btnUsage.UseVisualStyleBackColor = false;
+            this.btnUsage.Click += new System.EventHandler(this.btnUsage_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(125, 230);
+            this.ClientSize = new System.Drawing.Size(125, 233);
+            this.Controls.Add(this.btnUsage);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.lblMaxInterval);
             this.Controls.Add(this.lblMinInterval);
@@ -212,6 +234,7 @@
         private System.Windows.Forms.Label lblMinInterval;
         private System.Windows.Forms.Label lblMaxInterval;
         private System.Windows.Forms.Button btnQuit;
+        private System.Windows.Forms.Button btnUsage;
     }
 }
 

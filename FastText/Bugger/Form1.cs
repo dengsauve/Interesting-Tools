@@ -17,8 +17,10 @@ namespace Bugger
             InitializeComponent();
         }
 
+        // For use in loop later
         bool started = false;
 
+        // Collection of phrases for spamming :D
         string[] phrases = new string[]
         {
             "Hi",
@@ -46,6 +48,8 @@ namespace Bugger
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Adding hover text to intervals for range information
+
             new ToolTip().SetToolTip(numericMinInterval, "Range: 250 - 600");
             new ToolTip().SetToolTip(numericMaxInterval, "Range: 650 - 3000");
         }
@@ -54,16 +58,20 @@ namespace Bugger
         {
             started = true;
 
+            // so people don't try to mess with timing during operation
             numericMinInterval.Enabled = false;
             numericMaxInterval.Enabled = false;
 
+            // Taking into account user variables
             int minTime = (int)numericMinInterval.Value;
             int maxTime = (int)numericMaxInterval.Value;
 
             var personName = txtName.Text;
 
+            // Randomizes the timing of the messages, in an attempt to look human
             Random rand = new Random();
             
+            // Awesome countdown
             for(int i = 3; i > 0; i = i - 1)
             {
                 lblStatus.Text = i.ToString();
@@ -101,6 +109,13 @@ namespace Bugger
         private void btnQuit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnUsage_Click(object sender, EventArgs e)
+        {
+            // opens https://github.com/dengsauve/Interesting-Tools/blob/master/FastText/Bugger/README.MD in a web browser
+
+            System.Diagnostics.Process.Start("https://github.com/dengsauve/Interesting-Tools/blob/master/FastText/Bugger/README.MD");
         }
     }
 }

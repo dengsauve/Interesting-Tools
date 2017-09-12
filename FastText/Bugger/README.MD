@@ -11,6 +11,7 @@
 * Change the name of the person you're bothering
 * Set the parameters for bothering time (milliseconds)
 * Click Start
+* From when you click Start, you have 3 seconds to select the text box of the chat system you're using.
 
 ## Copyright
 
