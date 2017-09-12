@@ -209,6 +209,7 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnStart);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
