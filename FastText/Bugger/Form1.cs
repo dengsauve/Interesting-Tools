@@ -19,6 +19,31 @@ namespace Bugger
 
         bool started = false;
 
+        string[] phrases = new string[]
+        {
+            "Hi",
+            "What's up?",
+            "I didn't hit her",
+            "You don’t notice the air, until someone spoils it.",
+            "Don’t drink while driving – you will spill the beer.",
+            "If you love a woman, you shouldn’t be ashamed to show her to your wife.",
+            "Life didn’t work out, but everything else is not that bad.",
+            "If someone notices you with an open zipper, answer proudly: professional habit.",
+            "If you’re not supposed to eat at night, why is there a light bulb in the refrigerator?",
+            "FRIDAY is my second favorite F word.",
+            "There is a new trend in our office; everyone is putting names on their food.I saw it today, while I was eating a sandwich named Kevin.",
+            "The speed of light is when you take out a bottle of beer out of the fridge before the light comes on.",
+            "To weigh 50 kilos and say that you’re fat, that is so female…",
+            "I have been to many places but my goal is to go everywhere.",
+            "If Mayans could predict the future, why didn’t they predict their extinction?",
+            "Let's go!",
+            "Are you sleeping?",
+            "How you doing?",
+            "I'm bothertron Riiiiiiiiiiick!",
+            "I turned myself into a bothering computronic!",
+            "O hi mark!"
+        };
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -41,6 +66,9 @@ namespace Bugger
             while (started)
             {
                 SendKeys.Send(personName);
+                SendKeys.Send("{ENTER}");
+                await waitTime(rand.Next(300, 1100));
+                SendKeys.Send(phrases[rand.Next(0, phrases.Count())]);
                 SendKeys.Send("{ENTER}");
                 await waitTime(rand.Next(300, 1100));
             }
