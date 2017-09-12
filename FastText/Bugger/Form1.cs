@@ -97,5 +97,10 @@ namespace Bugger
 
             lblStatus.Text = "Not Bothering";
         }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -36,6 +36,7 @@
             this.numericMaxInterval = new System.Windows.Forms.NumericUpDown();
             this.lblMinInterval = new System.Windows.Forms.Label();
             this.lblMaxInterval = new System.Windows.Forms.Label();
+            this.btnQuit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericMinInterval)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericMaxInterval)).BeginInit();
             this.SuspendLayout();
@@ -161,12 +162,23 @@
             this.lblMaxInterval.TabIndex = 7;
             this.lblMaxInterval.Text = "Maximum Interval";
             // 
+            // btnQuit
+            // 
+            this.btnQuit.Location = new System.Drawing.Point(12, 197);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(100, 23);
+            this.btnQuit.TabIndex = 8;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(125, 202);
+            this.ClientSize = new System.Drawing.Size(125, 230);
+            this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.lblMaxInterval);
             this.Controls.Add(this.lblMinInterval);
             this.Controls.Add(this.numericMaxInterval);
@@ -199,6 +211,7 @@
         private System.Windows.Forms.NumericUpDown numericMaxInterval;
         private System.Windows.Forms.Label lblMinInterval;
         private System.Windows.Forms.Label lblMaxInterval;
+        private System.Windows.Forms.Button btnQuit;
     }
 }
 
