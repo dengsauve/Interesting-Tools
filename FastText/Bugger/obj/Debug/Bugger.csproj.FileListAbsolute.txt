@@ -1,0 +1,9 @@
+C:\Dennis\Code\Interesting-Tools\FastText\Bugger\bin\Debug\Bugger.exe.config
+C:\Dennis\Code\Interesting-Tools\FastText\Bugger\bin\Debug\Bugger.exe
+C:\Dennis\Code\Interesting-Tools\FastText\Bugger\bin\Debug\Bugger.pdb
+C:\Dennis\Code\Interesting-Tools\FastText\Bugger\obj\Debug\Bugger.csprojResolveAssemblyReference.cache
+C:\Dennis\Code\Interesting-Tools\FastText\Bugger\obj\Debug\Bugger.Form1.resources
+C:\Dennis\Code\Interesting-Tools\FastText\Bugger\obj\Debug\Bugger.Properties.Resources.resources
+C:\Dennis\Code\Interesting-Tools\FastText\Bugger\obj\Debug\Bugger.csproj.GenerateResource.Cache
+C:\Dennis\Code\Interesting-Tools\FastText\Bugger\obj\Debug\Bugger.exe
+C:\Dennis\Code\Interesting-Tools\FastText\Bugger\obj\Debug\Bugger.pdb
