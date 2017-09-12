@@ -88,7 +88,7 @@
             0});
             this.numericMinInterval.Location = new System.Drawing.Point(12, 51);
             this.numericMinInterval.Maximum = new decimal(new int[] {
-            1000,
+            600,
             0,
             0,
             0});
@@ -121,7 +121,7 @@
             0,
             0});
             this.numericMaxInterval.Minimum = new decimal(new int[] {
-            1100,
+            650,
             0,
             0,
             0});

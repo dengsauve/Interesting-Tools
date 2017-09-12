@@ -52,7 +52,15 @@ namespace Bugger
         private async void btnStart_Click(object sender, EventArgs e)
         {
             started = true;
+
+            numericMinInterval.Enabled = false;
+            numericMaxInterval.Enabled = false;
+
+            int minTime = (int)numericMinInterval.Value;
+            int maxTime = (int)numericMaxInterval.Value;
+
             var personName = txtName.Text;
+
             Random rand = new Random();
             
             for(int i = 3; i > 0; i = i - 1)
@@ -67,10 +75,10 @@ namespace Bugger
             {
                 SendKeys.Send(personName);
                 SendKeys.Send("{ENTER}");
-                await waitTime(rand.Next(300, 1100));
+                await waitTime(rand.Next(minTime, maxTime));
                 SendKeys.Send(phrases[rand.Next(0, phrases.Count())]);
                 SendKeys.Send("{ENTER}");
-                await waitTime(rand.Next(300, 1100));
+                await waitTime(rand.Next(minTime, maxTime));
             }
         }
 
@@ -82,6 +90,10 @@ namespace Bugger
         private void btnStop_Click(object sender, EventArgs e)
         {
             started = false;
+
+            numericMinInterval.Enabled = true;
+            numericMaxInterval.Enabled = true;
+
             lblStatus.Text = "Not Bothering";
         }
     }
