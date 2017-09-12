@@ -46,7 +46,8 @@ namespace Bugger
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            new ToolTip().SetToolTip(numericMinInterval, "Range: 250 - 600");
+            new ToolTip().SetToolTip(numericMaxInterval, "Range: 650 - 3000");
         }
 
         private async void btnStart_Click(object sender, EventArgs e)

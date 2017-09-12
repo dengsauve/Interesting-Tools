@@ -62,6 +62,8 @@
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.Location = new System.Drawing.Point(12, 12);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
@@ -81,6 +83,8 @@
             // 
             // numericMinInterval
             // 
+            this.numericMinInterval.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.numericMinInterval.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericMinInterval.Increment = new decimal(new int[] {
             50,
             0,
@@ -109,6 +113,8 @@
             // 
             // numericMaxInterval
             // 
+            this.numericMaxInterval.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.numericMaxInterval.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericMaxInterval.Increment = new decimal(new int[] {
             50,
             0,
@@ -130,7 +136,7 @@
             this.numericMaxInterval.Size = new System.Drawing.Size(100, 20);
             this.numericMaxInterval.TabIndex = 5;
             this.numericMaxInterval.Value = new decimal(new int[] {
-            1100,
+            650,
             0,
             0,
             0});
