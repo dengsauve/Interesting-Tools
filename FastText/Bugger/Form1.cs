@@ -52,6 +52,17 @@ namespace Bugger
 
             new ToolTip().SetToolTip(numericMinInterval, "Range: 250 - 600");
             new ToolTip().SetToolTip(numericMaxInterval, "Range: 650 - 3000");
+
+            MessageBox.Show(
+                "This Application was built in a Windows 10 Environment." +
+                "\n\nI cannot and will not guarantee the stability of this program on any older operating systems." +
+                "\nThis is due largely in part to not having access to Windows 7 or 8 machines to do any testing." +
+                "\n\nI have witnessed this program fail spectacularly on Windows 7, freezing the entire machine." +
+                "\n\nYou have been warned!",
+                "Operating System Warning",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Hand
+                );
         }
 
         private async void btnStart_Click(object sender, EventArgs e)

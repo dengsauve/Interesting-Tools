@@ -7,3 +7,4 @@ C:\Dennis\Code\Interesting-Tools\FastText\Bugger\obj\Debug\Bugger.Properties.Res
 C:\Dennis\Code\Interesting-Tools\FastText\Bugger\obj\Debug\Bugger.csproj.GenerateResource.Cache
 C:\Dennis\Code\Interesting-Tools\FastText\Bugger\obj\Debug\Bugger.exe
 C:\Dennis\Code\Interesting-Tools\FastText\Bugger\obj\Debug\Bugger.pdb
+C:\Dennis\Code\Interesting-Tools\FastText\Bugger\obj\Debug\Bugger.csproj.CoreCompileInputs.cache
