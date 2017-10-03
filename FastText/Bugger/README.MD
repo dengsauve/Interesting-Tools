@@ -1,6 +1,6 @@
 # Bugger
 
-## Installation (Windows 10* Only)
+## Installation (Windows 10*)
 
 1. Download [bugger.exe](https://github.com/dengsauve/Interesting-Tools/raw/master/FastText/Bugger/obj/Debug/Bugger.exe)
 
